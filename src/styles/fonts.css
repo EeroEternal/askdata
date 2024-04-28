@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'CohereIconDefault';
+  src: url('../../public/fonts/CohereIcon-Default.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'CohereIconOutline';
+  src: url('../../public/fonts/CohereIcon-Outline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

@@ -1,32 +1,46 @@
 {
+  "include": [
+    "src",
+    "next-env.d.ts",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"],
   "compilerOptions": {
-    "target": "es2018",
     "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "components": "@/components",
+      "utils": "@/lib/utils"
+    },
+    "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
     "resolveJsonModule": true,
+    "inlineSources": false,
     "isolatedModules": true,
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "strictNullChecks": true,
     "jsx": "preserve",
-    "incremental": true,
-    "noImplicitAny": false,
+    "skipLibCheck": true,
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "paths": {
-      "@/*": ["./src/*"],
-      "components/*": ["./src/components/*"],
-      "lib/*": ["src/lib/*"],
-      "actions/*": ["src/app/actions/*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+    ]
+  }
 }
